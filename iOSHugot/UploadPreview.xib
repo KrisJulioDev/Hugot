@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="UploadPreview" customModule="iOSHugot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="302"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="23414-NUICEV" translatesAutoresizingMaskIntoConstraints="NO" id="xX8-8v-UU5">
+                    <rect key="frame" x="0.0" y="0.0" width="327" height="302"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Ang puso parang paminta, Buo talaga pilit lang dinudurog ng iba.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="XBH-hQ-7kd">
+                    <rect key="frame" x="10" y="10" width="307" height="240"/>
+                    <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="23"/>
+                    <color key="textColor" red="0.9439077736" green="0.96370833330000005" blue="0.95727528490000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Fo-tu-LFU">
+                    <rect key="frame" x="0.0" y="257" width="327" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwt-oI-6qP">
+                            <rect key="frame" x="30" y="7" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="Liw-CF-hez"/>
+                                <constraint firstAttribute="height" constant="30" id="yDj-Ju-Rc8"/>
+                            </constraints>
+                            <state key="normal" image="upload_2"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jo4-0h-4OQ">
+                            <rect key="frame" x="282" y="7" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="UMJ-yt-gKj"/>
+                                <constraint firstAttribute="width" constant="30" id="tKo-rB-RZ4"/>
+                            </constraints>
+                            <state key="normal" image="delete"/>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXq-F7-raH">
+                            <rect key="frame" x="15" y="8" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="0c1-Pj-MTO"/>
+                                <constraint firstAttribute="width" constant="30" id="MvA-ib-feA"/>
+                            </constraints>
+                            <state key="normal" image="stack_of_photos"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="jo4-0h-4OQ" firstAttribute="centerY" secondItem="7Fo-tu-LFU" secondAttribute="centerY" id="5Xt-2E-IKZ"/>
+                        <constraint firstItem="Pwt-oI-6qP" firstAttribute="centerY" secondItem="7Fo-tu-LFU" secondAttribute="centerY" id="X9L-lD-3sq"/>
+                        <constraint firstItem="fXq-F7-raH" firstAttribute="leading" secondItem="7Fo-tu-LFU" secondAttribute="leading" constant="15" id="hCD-He-Tbn"/>
+                        <constraint firstAttribute="height" constant="45" id="iDp-13-twx"/>
+                        <constraint firstItem="Pwt-oI-6qP" firstAttribute="leading" secondItem="fXq-F7-raH" secondAttribute="trailing" constant="-15" id="mqf-wx-fgD"/>
+                        <constraint firstAttribute="trailing" secondItem="jo4-0h-4OQ" secondAttribute="trailing" constant="15" id="nO5-oB-1LJ"/>
+                        <constraint firstItem="fXq-F7-raH" firstAttribute="centerY" secondItem="7Fo-tu-LFU" secondAttribute="centerY" id="zkz-QR-8VT"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://www.facebook.com/HugotMobileApp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujj-KR-R7q">
+                    <rect key="frame" x="20" y="281.5" width="225.5" height="15.5"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="11"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgO-nU-HkE">
+                    <rect key="frame" x="8" y="356" width="311" height="36"/>
+                    <color key="backgroundColor" red="0.088101767003536224" green="0.37178274989128113" blue="0.59042292833328247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="17"/>
+                    <state key="normal" title="Share now">
+                        <color key="titleColor" red="0.9439077736" green="0.96370833330000005" blue="0.95727528490000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="XBH-hQ-7kd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="1Ax-mZ-nFg"/>
+                <constraint firstAttribute="bottom" secondItem="ujj-KR-R7q" secondAttribute="bottom" constant="5" id="45K-WD-B5A"/>
+                <constraint firstAttribute="bottom" secondItem="xgO-nU-HkE" secondAttribute="bottom" constant="8" id="48E-9r-KAh"/>
+                <constraint firstItem="XBH-hQ-7kd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="BCE-Xg-l4b"/>
+                <constraint firstAttribute="trailing" secondItem="XBH-hQ-7kd" secondAttribute="trailing" constant="10" id="QUN-Mp-amq"/>
+                <constraint firstItem="7Fo-tu-LFU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZMZ-tv-Ucd"/>
+                <constraint firstItem="xX8-8v-UU5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ac5-5z-cFB"/>
+                <constraint firstAttribute="bottom" secondItem="xX8-8v-UU5" secondAttribute="bottom" id="ajF-RJ-C5T"/>
+                <constraint firstItem="xgO-nU-HkE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="biQ-AX-UCG"/>
+                <constraint firstItem="xgO-nU-HkE" firstAttribute="top" secondItem="XBH-hQ-7kd" secondAttribute="bottom" constant="25" id="bvD-Lt-mLN"/>
+                <constraint firstAttribute="trailing" secondItem="7Fo-tu-LFU" secondAttribute="trailing" id="c0o-D6-Xsm"/>
+                <constraint firstItem="ujj-KR-R7q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="g3a-K8-TWc"/>
+                <constraint firstAttribute="trailing" secondItem="xX8-8v-UU5" secondAttribute="trailing" id="hLs-sg-C4O"/>
+                <constraint firstItem="xX8-8v-UU5" firstAttribute="top" secondItem="XBH-hQ-7kd" secondAttribute="bottom" constant="-250" id="lKr-cb-wZ8"/>
+                <constraint firstAttribute="bottom" secondItem="7Fo-tu-LFU" secondAttribute="bottom" id="pNt-K9-CQh"/>
+                <constraint firstItem="xX8-8v-UU5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="t75-1w-Bok"/>
+                <constraint firstAttribute="trailing" secondItem="xgO-nU-HkE" secondAttribute="trailing" constant="8" id="wpC-RU-Q67"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="xgO-nU-HkE"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="bvD-Lt-mLN"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="actionView" destination="7Fo-tu-LFU" id="9RQ-Ym-swq"/>
+                <outlet property="changeImage" destination="fXq-F7-raH" id="hzC-b2-4bh"/>
+                <outlet property="closeButton" destination="jo4-0h-4OQ" id="Z9E-Zu-w9Z"/>
+                <outlet property="hugotImage" destination="xX8-8v-UU5" id="gap-p6-40x"/>
+                <outlet property="hugotLine" destination="XBH-hQ-7kd" id="oCF-QM-bht"/>
+                <outlet property="siteLabel" destination="ujj-KR-R7q" id="w4s-CR-2wq"/>
+                <outlet property="uploadButton" destination="Pwt-oI-6qP" id="5sM-vb-e4C"/>
+            </connections>
+            <point key="canvasLocation" x="324.5" y="238"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="23414-NUICEV" width="843" height="1280"/>
+        <image name="delete" width="25" height="25"/>
+        <image name="stack_of_photos" width="50" height="50"/>
+        <image name="upload_2" width="50" height="50"/>
+    </resources>
+</document>

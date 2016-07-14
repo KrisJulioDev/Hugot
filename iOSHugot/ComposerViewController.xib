@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposerViewController" customModule="iOSHugot" customModuleProvider="target">
+            <connections>
+                <outlet property="hugotField" destination="opr-q0-lvU" id="mjP-c8-xg6"/>
+                <outlet property="hugotLabel" destination="9AZ-nI-fn2" id="xjo-Qb-45o"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XzL-8U-CR2">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Put it here..." textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="opr-q0-lvU">
+                            <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.47843137250000001" green="0.4549019608" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="fYn-j7-o8p">
+                                    <variation key="widthClass=compact" constant="45"/>
+                                </constraint>
+                            </constraints>
+                            <color key="textColor" red="0.9439077736" green="0.96370833330000005" blue="0.95727528490000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="done"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="fYn-j7-o8p"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="fYn-j7-o8p"/>
+                                </mask>
+                            </variation>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Your hugot here...&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="9AZ-nI-fn2">
+                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="25"/>
+                            <color key="textColor" red="0.47843137250000001" green="0.4549019608" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="4bx-md-yEj">
+                            <variation key="widthClass=compact" constant="230"/>
+                        </constraint>
+                        <constraint firstItem="9AZ-nI-fn2" firstAttribute="top" secondItem="XzL-8U-CR2" secondAttribute="top" constant="8" id="LoC-aG-EO2"/>
+                        <constraint firstItem="opr-q0-lvU" firstAttribute="top" secondItem="9AZ-nI-fn2" secondAttribute="bottom" constant="8" id="Oz7-gz-kFd"/>
+                        <constraint firstAttribute="bottom" secondItem="opr-q0-lvU" secondAttribute="bottom" constant="20" id="eml-0i-3Ww">
+                            <variation key="widthClass=compact" constant="8"/>
+                        </constraint>
+                        <constraint firstAttribute="trailing" secondItem="opr-q0-lvU" secondAttribute="trailing" constant="8" id="ey5-Bd-oFK"/>
+                        <constraint firstItem="opr-q0-lvU" firstAttribute="leading" secondItem="XzL-8U-CR2" secondAttribute="leading" constant="8" id="fx9-kj-Vhl"/>
+                        <constraint firstItem="9AZ-nI-fn2" firstAttribute="leading" secondItem="XzL-8U-CR2" secondAttribute="leading" constant="8" id="iOm-BL-lx3">
+                            <variation key="widthClass=compact" constant="15"/>
+                        </constraint>
+                        <constraint firstAttribute="trailing" secondItem="9AZ-nI-fn2" secondAttribute="trailing" constant="8" id="qTv-ZZ-s6W">
+                            <variation key="widthClass=compact" constant="15"/>
+                        </constraint>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="opr-q0-lvU"/>
+                            <exclude reference="9AZ-nI-fn2"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="4bx-md-yEj"/>
+                            <exclude reference="Oz7-gz-kFd"/>
+                            <exclude reference="eml-0i-3Ww"/>
+                            <exclude reference="ey5-Bd-oFK"/>
+                            <exclude reference="fx9-kj-Vhl"/>
+                            <exclude reference="LoC-aG-EO2"/>
+                            <exclude reference="iOm-BL-lx3"/>
+                            <exclude reference="qTv-ZZ-s6W"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="opr-q0-lvU"/>
+                            <include reference="9AZ-nI-fn2"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="4bx-md-yEj"/>
+                            <include reference="Oz7-gz-kFd"/>
+                            <include reference="eml-0i-3Ww"/>
+                            <include reference="ey5-Bd-oFK"/>
+                            <include reference="fx9-kj-Vhl"/>
+                            <include reference="LoC-aG-EO2"/>
+                            <include reference="iOm-BL-lx3"/>
+                            <include reference="qTv-ZZ-s6W"/>
+                        </mask>
+                    </variation>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Every &quot;like&quot; your post receive, will increase your Heart count by one that you can use to like other's posts" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEv-XN-T2y">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="15"/>
+                    <color key="textColor" red="0.9439077736" green="0.96370833330000005" blue="0.95727528490000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can also &quot;unlike&quot; other post, but be aware that it will also decrease their Heart value" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENL-jO-D5l">
+                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="15"/>
+                    <color key="textColor" red="0.9439077736" green="0.96370833330000005" blue="0.45291128419452886" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ENL-jO-D5l" secondAttribute="trailing" constant="15" id="7vg-8S-Yco"/>
+                <constraint firstAttribute="trailing" secondItem="XzL-8U-CR2" secondAttribute="trailing" constant="8" id="MGM-Lg-UQk"/>
+                <constraint firstItem="AEv-XN-T2y" firstAttribute="top" secondItem="XzL-8U-CR2" secondAttribute="bottom" constant="17" id="OLw-yf-IYh"/>
+                <constraint firstItem="AEv-XN-T2y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="RlP-HO-efE"/>
+                <constraint firstItem="ENL-jO-D5l" firstAttribute="top" secondItem="AEv-XN-T2y" secondAttribute="bottom" constant="15" id="b33-zl-7En"/>
+                <constraint firstItem="AEv-XN-T2y" firstAttribute="top" secondItem="ENL-jO-D5l" secondAttribute="bottom" constant="17.5" id="ex7-PU-mYn">
+                    <variation key="widthClass=compact" constant="15"/>
+                </constraint>
+                <constraint firstItem="ENL-jO-D5l" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="gKs-pj-2St"/>
+                <constraint firstItem="XzL-8U-CR2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="jYC-bY-0xn">
+                    <variation key="widthClass=compact" constant="80"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="AEv-XN-T2y" secondAttribute="trailing" constant="15" id="m9N-sr-o1W"/>
+                <constraint firstItem="XzL-8U-CR2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="zDp-gG-XPK"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="XzL-8U-CR2"/>
+                    <exclude reference="AEv-XN-T2y"/>
+                    <exclude reference="ENL-jO-D5l"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="OLw-yf-IYh"/>
+                    <exclude reference="RlP-HO-efE"/>
+                    <exclude reference="ex7-PU-mYn"/>
+                    <exclude reference="m9N-sr-o1W"/>
+                    <exclude reference="7vg-8S-Yco"/>
+                    <exclude reference="b33-zl-7En"/>
+                    <exclude reference="gKs-pj-2St"/>
+                    <exclude reference="MGM-Lg-UQk"/>
+                    <exclude reference="jYC-bY-0xn"/>
+                    <exclude reference="zDp-gG-XPK"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="XzL-8U-CR2"/>
+                    <include reference="AEv-XN-T2y"/>
+                    <include reference="ENL-jO-D5l"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="OLw-yf-IYh"/>
+                    <include reference="RlP-HO-efE"/>
+                    <exclude reference="ex7-PU-mYn"/>
+                    <include reference="m9N-sr-o1W"/>
+                    <include reference="7vg-8S-Yco"/>
+                    <include reference="b33-zl-7En"/>
+                    <include reference="gKs-pj-2St"/>
+                    <include reference="MGM-Lg-UQk"/>
+                    <include reference="jYC-bY-0xn"/>
+                    <include reference="zDp-gG-XPK"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

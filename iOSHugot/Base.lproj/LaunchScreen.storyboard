@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,13 +16,76 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" image="batganun" translatesAutoresizingMaskIntoConstraints="NO" id="2MJ-kD-69z">
+                                <rect key="frame" x="0.0" y="-2208" width="1242" height="2208"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="hugotLogo" translatesAutoresizingMaskIntoConstraints="NO" id="pIh-oC-hIt">
+                                <rect key="frame" x="0.0" y="-1024" width="1024" height="1024"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="4bx-xX-DJ0"/>
+                                    <constraint firstAttribute="width" constant="256" id="O0Z-2u-jOq"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4bx-xX-DJ0"/>
+                                        <exclude reference="O0Z-2u-jOq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4bx-xX-DJ0"/>
+                                        <include reference="O0Z-2u-jOq"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2MJ-kD-69z" secondAttribute="bottom" id="1a9-QM-hE4"/>
+                            <constraint firstItem="pIh-oC-hIt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="5cZ-0y-0wQ"/>
+                            <constraint firstItem="2MJ-kD-69z" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="BgD-ug-tcb"/>
+                            <constraint firstItem="pIh-oC-hIt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="FUq-3C-wUt"/>
+                            <constraint firstAttribute="trailing" secondItem="2MJ-kD-69z" secondAttribute="trailing" id="MUG-5b-YZY"/>
+                            <constraint firstItem="2MJ-kD-69z" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="jUj-1K-CpU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2MJ-kD-69z"/>
+                                <exclude reference="pIh-oC-hIt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1a9-QM-hE4"/>
+                                <exclude reference="BgD-ug-tcb"/>
+                                <exclude reference="MUG-5b-YZY"/>
+                                <exclude reference="jUj-1K-CpU"/>
+                                <exclude reference="5cZ-0y-0wQ"/>
+                                <exclude reference="FUq-3C-wUt"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="2MJ-kD-69z"/>
+                                <include reference="pIh-oC-hIt"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1a9-QM-hE4"/>
+                                <include reference="BgD-ug-tcb"/>
+                                <include reference="MUG-5b-YZY"/>
+                                <include reference="jUj-1K-CpU"/>
+                                <include reference="5cZ-0y-0wQ"/>
+                                <include reference="FUq-3C-wUt"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="batganun" width="1242" height="2208"/>
+        <image name="hugotLogo" width="1024" height="1024"/>
+    </resources>
 </document>

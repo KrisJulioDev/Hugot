@@ -7,13 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3501ED071D3531C0002621FC /* UploadPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3501ED061D3531C0002621FC /* UploadPreview.swift */; };
+		3501ED091D3531CC002621FC /* UploadPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3501ED081D3531CC002621FC /* UploadPreview.xib */; };
+		3501ED0B1D353DD5002621FC /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3501ED0A1D353DD5002621FC /* UIImageExtension.swift */; };
+		3515CD5C1D2A8F4100519E71 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3515CD5B1D2A8F4100519E71 /* LoginViewController.swift */; };
+		35323C4A1D368CC700326677 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35323C471D368CC700326677 /* FBSDKLoginKit.framework */; };
+		35323C4B1D368CC700326677 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35323C481D368CC700326677 /* FBSDKShareKit.framework */; };
+		3561F6AA1D37D9CE007CA2AC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3561F6A91D37D9CE007CA2AC /* FBSDKCoreKit.framework */; };
+		3590B1E61D2696F600B5B58D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3590B1E51D2696F600B5B58D /* GoogleService-Info.plist */; };
+		3594B3011D26A60700AB16B2 /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3594B3001D26A60700AB16B2 /* Activity.storyboard */; };
+		3594B3031D26AA3900AB16B2 /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3594B3021D26AA3900AB16B2 /* FrontPageViewController.swift */; };
+		3594B3061D26AE2F00AB16B2 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3594B3051D26AE2F00AB16B2 /* DataService.swift */; };
+		3594B30A1D26AFD600AB16B2 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3594B3091D26AFD600AB16B2 /* AppConstants.swift */; };
+		35AE7B301D2AA0CB00CB3E16 /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE7B2F1D2AA0CB00CB3E16 /* UserHelper.swift */; };
+		35AE7B321D2AA41300CB3E16 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE7B311D2AA41300CB3E16 /* ViewHelper.swift */; };
+		35AE7B381D2AACFB00CB3E16 /* HugotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE7B361D2AACFB00CB3E16 /* HugotTableViewCell.swift */; };
+		35CA87011D2BE1B60030C153 /* HugotLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CA87001D2BE1B60030C153 /* HugotLine.swift */; };
+		35CA87051D2BE2200030C153 /* ComposerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CA87031D2BE2200030C153 /* ComposerViewController.swift */; };
+		35CA87061D2BE2200030C153 /* ComposerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35CA87041D2BE2200030C153 /* ComposerViewController.xib */; };
+		35CA87081D2BE43F0030C153 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CA87071D2BE43F0030C153 /* MainViewController.swift */; };
+		35CA870B1D2BE8840030C153 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CA870A1D2BE8840030C153 /* ViewControllerExtensions.swift */; };
+		35CA870E1D2C0A040030C153 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CA870D1D2C0A040030C153 /* Utilities.swift */; };
+		35CA87111D2C707F0030C153 /* HugotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CA87101D2C707F0030C153 /* HugotViewModel.swift */; };
+		35CA87151D2C7AEF0030C153 /* DataObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CA87141D2C7AEF0030C153 /* DataObserver.swift */; };
 		35D1BD151D2691F10066F611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1BD141D2691F10066F611 /* AppDelegate.swift */; };
-		35D1BD171D2691F10066F611 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1BD161D2691F10066F611 /* ViewController.swift */; };
 		35D1BD1A1D2691F10066F611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D1BD181D2691F10066F611 /* Main.storyboard */; };
 		35D1BD1C1D2691F10066F611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D1BD1B1D2691F10066F611 /* Assets.xcassets */; };
 		35D1BD1F1D2691F10066F611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D1BD1D1D2691F10066F611 /* LaunchScreen.storyboard */; };
 		35D1BD2A1D2691F10066F611 /* iOSHugotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1BD291D2691F10066F611 /* iOSHugotTests.swift */; };
 		35D1BD351D2691F10066F611 /* iOSHugotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1BD341D2691F10066F611 /* iOSHugotUITests.swift */; };
+		35F4502B1D2CC0E900E90783 /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4502A1D2CC0E900E90783 /* ButtonExtensions.swift */; };
+		35F4502E1D2CE65000E90783 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4502C1D2CE65000E90783 /* UserProfileViewController.swift */; };
+		35F4502F1D2CE65000E90783 /* UserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35F4502D1D2CE65000E90783 /* UserProfileViewController.xib */; };
+		35F450321D2CEBD400E90783 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F450311D2CEBD400E90783 /* UserModel.swift */; };
+		35F450341D2CECA800E90783 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F450331D2CECA800E90783 /* UserViewModel.swift */; };
+		C145C0BF52D9E622CC8CFAC6 /* Pods_iOSHugot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52477F3E2D81DD939A2199F7 /* Pods_iOSHugot.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +62,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3501ED061D3531C0002621FC /* UploadPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadPreview.swift; sourceTree = "<group>"; };
+		3501ED081D3531CC002621FC /* UploadPreview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadPreview.xib; sourceTree = "<group>"; };
+		3501ED0A1D353DD5002621FC /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		3515CD5B1D2A8F4100519E71 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3515CD601D2A907D00519E71 /* iOSHugot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSHugot-Bridging-Header.h"; sourceTree = "<group>"; };
+		35323C471D368CC700326677 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "iOS Frameworks/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		35323C481D368CC700326677 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "iOS Frameworks/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		3561F6A91D37D9CE007CA2AC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "iOS Frameworks/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		3590B1E51D2696F600B5B58D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3594B3001D26A60700AB16B2 /* Activity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
+		3594B3021D26AA3900AB16B2 /* FrontPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontPageViewController.swift; sourceTree = "<group>"; };
+		3594B3051D26AE2F00AB16B2 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		3594B3091D26AFD600AB16B2 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		3594B30B1D26B00100AB16B2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		35AE7B2F1D2AA0CB00CB3E16 /* UserHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHelper.swift; sourceTree = "<group>"; };
+		35AE7B311D2AA41300CB3E16 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
+		35AE7B361D2AACFB00CB3E16 /* HugotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HugotTableViewCell.swift; sourceTree = "<group>"; };
+		35CA87001D2BE1B60030C153 /* HugotLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HugotLine.swift; sourceTree = "<group>"; };
+		35CA87031D2BE2200030C153 /* ComposerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposerViewController.swift; sourceTree = "<group>"; };
+		35CA87041D2BE2200030C153 /* ComposerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposerViewController.xib; sourceTree = "<group>"; };
+		35CA87071D2BE43F0030C153 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		35CA870A1D2BE8840030C153 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		35CA870D1D2C0A040030C153 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		35CA87101D2C707F0030C153 /* HugotViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HugotViewModel.swift; sourceTree = "<group>"; };
+		35CA87141D2C7AEF0030C153 /* DataObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataObserver.swift; sourceTree = "<group>"; };
 		35D1BD111D2691F10066F611 /* iOSHugot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSHugot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D1BD141D2691F10066F611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35D1BD161D2691F10066F611 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35D1BD191D2691F10066F611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35D1BD1B1D2691F10066F611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35D1BD1E1D2691F10066F611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +99,17 @@
 		35D1BD301D2691F10066F611 /* iOSHugotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSHugotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D1BD341D2691F10066F611 /* iOSHugotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSHugotUITests.swift; sourceTree = "<group>"; };
 		35D1BD361D2691F10066F611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35F4502A1D2CC0E900E90783 /* ButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
+		35F4502C1D2CE65000E90783 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
+		35F4502D1D2CE65000E90783 /* UserProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileViewController.xib; sourceTree = "<group>"; };
+		35F450311D2CEBD400E90783 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		35F450331D2CECA800E90783 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		35F450351D2E7E7A00E90783 /* beyond_the_mountains.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = beyond_the_mountains.ttf; sourceTree = "<group>"; };
+		52477F3E2D81DD939A2199F7 /* Pods_iOSHugot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSHugot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C14BA55AB2FEB3FC78D8A84 /* Pods_iOSHugotUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSHugotUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95B087BDE4BD11BAD21AAB05 /* Pods-iOSHugot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSHugot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSHugot/Pods-iOSHugot.debug.xcconfig"; sourceTree = "<group>"; };
+		A70F788C048EEE53FDB591ED /* Pods_iOSHugotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSHugotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0797C2627F3434BF15A60D8 /* Pods-iOSHugot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSHugot.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSHugot/Pods-iOSHugot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +117,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C145C0BF52D9E622CC8CFAC6 /* Pods_iOSHugot.framework in Frameworks */,
+				3561F6AA1D37D9CE007CA2AC /* FBSDKCoreKit.framework in Frameworks */,
+				35323C4A1D368CC700326677 /* FBSDKLoginKit.framework in Frameworks */,
+				35323C4B1D368CC700326677 /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +141,131 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3594B2FC1D26A5A100AB16B2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				35D1BD181D2691F10066F611 /* Main.storyboard */,
+				35D1BD1D1D2691F10066F611 /* LaunchScreen.storyboard */,
+				3594B3001D26A60700AB16B2 /* Activity.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		3594B2FD1D26A5AD00AB16B2 /* Delegates  */ = {
+			isa = PBXGroup;
+			children = (
+				35D1BD141D2691F10066F611 /* AppDelegate.swift */,
+				35CA87071D2BE43F0030C153 /* MainViewController.swift */,
+			);
+			name = "Delegates ";
+			sourceTree = "<group>";
+		};
+		3594B2FE1D26A5BD00AB16B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				35F450351D2E7E7A00E90783 /* beyond_the_mountains.ttf */,
+				35D1BD1B1D2691F10066F611 /* Assets.xcassets */,
+				35D1BD201D2691F10066F611 /* Info.plist */,
+				3590B1E51D2696F600B5B58D /* GoogleService-Info.plist */,
+				3515CD601D2A907D00519E71 /* iOSHugot-Bridging-Header.h */,
+				3594B30B1D26B00100AB16B2 /* PrefixHeader.pch */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3594B2FF1D26A5E000AB16B2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3594B3021D26AA3900AB16B2 /* FrontPageViewController.swift */,
+				3515CD5B1D2A8F4100519E71 /* LoginViewController.swift */,
+				35CA87031D2BE2200030C153 /* ComposerViewController.swift */,
+				35CA87041D2BE2200030C153 /* ComposerViewController.xib */,
+				35F4502C1D2CE65000E90783 /* UserProfileViewController.swift */,
+				35F4502D1D2CE65000E90783 /* UserProfileViewController.xib */,
+				3501ED061D3531C0002621FC /* UploadPreview.swift */,
+				3501ED081D3531CC002621FC /* UploadPreview.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3594B3041D26AE2200AB16B2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				35CA87141D2C7AEF0030C153 /* DataObserver.swift */,
+				3594B3051D26AE2F00AB16B2 /* DataService.swift */,
+				35AE7B2F1D2AA0CB00CB3E16 /* UserHelper.swift */,
+				35AE7B311D2AA41300CB3E16 /* ViewHelper.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		3594B3071D26AFC000AB16B2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3594B3091D26AFD600AB16B2 /* AppConstants.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		35AE7B331D2AACB200CB3E16 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				35AE7B361D2AACFB00CB3E16 /* HugotTableViewCell.swift */,
+			);
+			name = ViewCells;
+			sourceTree = "<group>";
+		};
+		35CA87091D2BE8700030C153 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				35CA870A1D2BE8840030C153 /* ViewControllerExtensions.swift */,
+				35F4502A1D2CC0E900E90783 /* ButtonExtensions.swift */,
+				3501ED0A1D353DD5002621FC /* UIImageExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		35CA870C1D2BFE190030C153 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				35CA870D1D2C0A040030C153 /* Utilities.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		35CA870F1D2C704B0030C153 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				35CA87121D2C70830030C153 /* ModelViewModel */,
+				35AE7B331D2AACB200CB3E16 /* ViewCells */,
+				3594B2FD1D26A5AD00AB16B2 /* Delegates  */,
+				3594B2FF1D26A5E000AB16B2 /* ViewControllers */,
+				3594B3041D26AE2200AB16B2 /* Services */,
+				3594B3071D26AFC000AB16B2 /* Constants */,
+				35CA87091D2BE8700030C153 /* Extensions */,
+				35CA870C1D2BFE190030C153 /* Utilities */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		35CA87121D2C70830030C153 /* ModelViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				35F450301D2CEBBF00E90783 /* ViewModel */,
+				35CA87131D2C70BE0030C153 /* Model */,
+			);
+			name = ModelViewModel;
+			sourceTree = "<group>";
+		};
+		35CA87131D2C70BE0030C153 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35CA87001D2BE1B60030C153 /* HugotLine.swift */,
+				35F450311D2CEBD400E90783 /* UserModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		35D1BD081D2691F10066F611 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +273,8 @@
 				35D1BD281D2691F10066F611 /* iOSHugotTests */,
 				35D1BD331D2691F10066F611 /* iOSHugotUITests */,
 				35D1BD121D2691F10066F611 /* Products */,
+				EEEA794C57681E591CB040FF /* Pods */,
+				6843BEFEAC04553F7A3BB9A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +291,9 @@
 		35D1BD131D2691F10066F611 /* iOSHugot */ = {
 			isa = PBXGroup;
 			children = (
-				35D1BD141D2691F10066F611 /* AppDelegate.swift */,
-				35D1BD161D2691F10066F611 /* ViewController.swift */,
-				35D1BD181D2691F10066F611 /* Main.storyboard */,
-				35D1BD1B1D2691F10066F611 /* Assets.xcassets */,
-				35D1BD1D1D2691F10066F611 /* LaunchScreen.storyboard */,
-				35D1BD201D2691F10066F611 /* Info.plist */,
+				35CA870F1D2C704B0030C153 /* Classes */,
+				3594B2FC1D26A5A100AB16B2 /* Storyboards */,
+				3594B2FE1D26A5BD00AB16B2 /* Resources */,
 			);
 			path = iOSHugot;
 			sourceTree = "<group>";
@@ -125,6 +316,37 @@
 			path = iOSHugotUITests;
 			sourceTree = "<group>";
 		};
+		35F450301D2CEBBF00E90783 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				35CA87101D2C707F0030C153 /* HugotViewModel.swift */,
+				35F450331D2CECA800E90783 /* UserViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		6843BEFEAC04553F7A3BB9A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3561F6A91D37D9CE007CA2AC /* FBSDKCoreKit.framework */,
+				35323C471D368CC700326677 /* FBSDKLoginKit.framework */,
+				35323C481D368CC700326677 /* FBSDKShareKit.framework */,
+				52477F3E2D81DD939A2199F7 /* Pods_iOSHugot.framework */,
+				A70F788C048EEE53FDB591ED /* Pods_iOSHugotTests.framework */,
+				8C14BA55AB2FEB3FC78D8A84 /* Pods_iOSHugotUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEEA794C57681E591CB040FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95B087BDE4BD11BAD21AAB05 /* Pods-iOSHugot.debug.xcconfig */,
+				F0797C2627F3434BF15A60D8 /* Pods-iOSHugot.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +354,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35D1BD391D2691F10066F611 /* Build configuration list for PBXNativeTarget "iOSHugot" */;
 			buildPhases = (
+				A5AE24D965876C1134F39A5F /* [CP] Check Pods Manifest.lock */,
 				35D1BD0D1D2691F10066F611 /* Sources */,
 				35D1BD0E1D2691F10066F611 /* Frameworks */,
 				35D1BD0F1D2691F10066F611 /* Resources */,
+				BC9FD59BC9214D4BAD197F56 /* [CP] Embed Pods Frameworks */,
+				627EB2A10C8AB3C1581A42BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +374,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35D1BD3C1D2691F10066F611 /* Build configuration list for PBXNativeTarget "iOSHugotTests" */;
 			buildPhases = (
+				8EC63988806A68E7F13FE837 /* [CP] Check Pods Manifest.lock */,
 				35D1BD211D2691F10066F611 /* Sources */,
 				35D1BD221D2691F10066F611 /* Frameworks */,
 				35D1BD231D2691F10066F611 /* Resources */,
+				DA9B8F9007ABADB8615934DA /* [CP] Embed Pods Frameworks */,
+				76256248B56FFE492CD2FE64 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +395,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35D1BD3F1D2691F10066F611 /* Build configuration list for PBXNativeTarget "iOSHugotUITests" */;
 			buildPhases = (
+				0CF45289832C31ABF8EE5629 /* [CP] Check Pods Manifest.lock */,
 				35D1BD2C1D2691F10066F611 /* Sources */,
 				35D1BD2D1D2691F10066F611 /* Frameworks */,
 				35D1BD2E1D2691F10066F611 /* Resources */,
+				A8BFA76E9F7E719E631155E6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +423,12 @@
 				TargetAttributes = {
 					35D1BD101D2691F10066F611 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = VS9A4QWTAC;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					35D1BD241D2691F10066F611 = {
 						CreatedOnToolsVersion = 7.3;
@@ -229,9 +465,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35CA87061D2BE2200030C153 /* ComposerViewController.xib in Resources */,
+				3501ED091D3531CC002621FC /* UploadPreview.xib in Resources */,
 				35D1BD1F1D2691F10066F611 /* LaunchScreen.storyboard in Resources */,
+				3590B1E61D2696F600B5B58D /* GoogleService-Info.plist in Resources */,
+				3594B3011D26A60700AB16B2 /* Activity.storyboard in Resources */,
 				35D1BD1C1D2691F10066F611 /* Assets.xcassets in Resources */,
 				35D1BD1A1D2691F10066F611 /* Main.storyboard in Resources */,
+				35F4502F1D2CE65000E90783 /* UserProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +492,155 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CF45289832C31ABF8EE5629 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		627EB2A10C8AB3C1581A42BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSHugot/Pods-iOSHugot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76256248B56FFE492CD2FE64 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSHugotTests/Pods-iOSHugotTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EC63988806A68E7F13FE837 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A5AE24D965876C1134F39A5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A8BFA76E9F7E719E631155E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSHugotUITests/Pods-iOSHugotUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC9FD59BC9214D4BAD197F56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSHugot/Pods-iOSHugot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA9B8F9007ABADB8615934DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSHugotTests/Pods-iOSHugotTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		35D1BD0D1D2691F10066F611 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35D1BD171D2691F10066F611 /* ViewController.swift in Sources */,
+				3594B3061D26AE2F00AB16B2 /* DataService.swift in Sources */,
+				35CA87081D2BE43F0030C153 /* MainViewController.swift in Sources */,
+				3501ED0B1D353DD5002621FC /* UIImageExtension.swift in Sources */,
+				35CA87151D2C7AEF0030C153 /* DataObserver.swift in Sources */,
 				35D1BD151D2691F10066F611 /* AppDelegate.swift in Sources */,
+				35AE7B301D2AA0CB00CB3E16 /* UserHelper.swift in Sources */,
+				35F4502E1D2CE65000E90783 /* UserProfileViewController.swift in Sources */,
+				35CA870E1D2C0A040030C153 /* Utilities.swift in Sources */,
+				35CA870B1D2BE8840030C153 /* ViewControllerExtensions.swift in Sources */,
+				3594B3031D26AA3900AB16B2 /* FrontPageViewController.swift in Sources */,
+				35CA87011D2BE1B60030C153 /* HugotLine.swift in Sources */,
+				3515CD5C1D2A8F4100519E71 /* LoginViewController.swift in Sources */,
+				35CA87051D2BE2200030C153 /* ComposerViewController.swift in Sources */,
+				35CA87111D2C707F0030C153 /* HugotViewModel.swift in Sources */,
+				3501ED071D3531C0002621FC /* UploadPreview.swift in Sources */,
+				35F450341D2CECA800E90783 /* UserViewModel.swift in Sources */,
+				35AE7B381D2AACFB00CB3E16 /* HugotTableViewCell.swift in Sources */,
+				35F4502B1D2CC0E900E90783 /* ButtonExtensions.swift in Sources */,
+				3594B30A1D26AFD600AB16B2 /* AppConstants.swift in Sources */,
+				35F450321D2CEBD400E90783 /* UserModel.swift in Sources */,
+				35AE7B321D2AA41300CB3E16 /* ViewHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,23 +782,58 @@
 		};
 		35D1BD3A1D2691F10066F611 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95B087BDE4BD11BAD21AAB05 /* Pods-iOSHugot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Josh Henry Regondola (49526P6U3L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+				);
+				GCC_PREFIX_HEADER = iOSHugot/PrefixHeader.pch;
 				INFOPLIST_FILE = iOSHugot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.virem.ioshugot.iOSHugot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.virem.ioshugot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9880d886-5532-408a-9b5a-46991f7050c5";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSHugot/iOSHugot-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		35D1BD3B1D2691F10066F611 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0797C2627F3434BF15A60D8 /* Pods-iOSHugot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Josh Henry Regondola (49526P6U3L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+				);
+				GCC_PREFIX_HEADER = iOSHugot/PrefixHeader.pch;
 				INFOPLIST_FILE = iOSHugot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.virem.ioshugot.iOSHugot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.virem.ioshugot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9880d886-5532-408a-9b5a-46991f7050c5";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSHugot/iOSHugot-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -484,6 +902,7 @@
 				35D1BD3B1D2691F10066F611 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35D1BD3C1D2691F10066F611 /* Build configuration list for PBXNativeTarget "iOSHugotTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +911,7 @@
 				35D1BD3E1D2691F10066F611 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35D1BD3F1D2691F10066F611 /* Build configuration list for PBXNativeTarget "iOSHugotUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +920,7 @@
 				35D1BD411D2691F10066F611 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

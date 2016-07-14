@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  iOSHugot
+//
+//  Created by Kris Julio on 7/1/16.
+//  Copyright © 2016 Virem. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import AppConstants
+
+#endif /* PrefixHeader_pch */

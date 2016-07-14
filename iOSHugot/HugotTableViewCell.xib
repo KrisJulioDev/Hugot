@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A282a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="hugot_cell" rowHeight="167" id="KGk-i7-Jjw" customClass="HugotTableViewCell" customModule="iOSHugot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="167"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="381" height="166.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalCentering" alignment="center" spacing="17" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GwM-0J-Wkg">
+                        <rect key="frame" x="63" y="-54" width="29" height="95"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6f-wY-Kzb">
+                                <rect key="frame" x="2" y="0.0" width="25" height="25"/>
+                                <state key="normal" image="like"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grG-Vj-owH">
+                                <rect key="frame" x="0.0" y="37" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPI-mx-IzD">
+                                <rect key="frame" x="2" y="70" width="25" height="25"/>
+                                <state key="normal" image="like"/>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="EPI-mx-IzD" firstAttribute="top" secondItem="grG-Vj-owH" secondAttribute="bottom" constant="12" id="Thc-VK-QyI"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Kris Julio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwZ-j7-QGA" userLabel="Hugot">
+                        <rect key="frame" x="13" y="13" width="62.5" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="7h4-eI-knq"/>
+                            <constraint firstAttribute="width" constant="200" id="7nY-o9-7Pn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7nY-o9-7Pn"/>
+                                <exclude reference="7h4-eI-knq"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvN-m6-e5A">
+                        <rect key="frame" x="13" y="41" width="42" height="117.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WvN-m6-e5A" firstAttribute="top" secondItem="FwZ-j7-QGA" secondAttribute="bottom" constant="7.5" id="2Ro-zc-UkS"/>
+                    <constraint firstItem="FwZ-j7-QGA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="CgV-5B-aH9"/>
+                    <constraint firstItem="GwM-0J-Wkg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="b3D-97-hRa"/>
+                    <constraint firstItem="WvN-m6-e5A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="haC-le-SOI"/>
+                    <constraint firstItem="WvN-m6-e5A" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="k2Y-Fc-0NP"/>
+                    <constraint firstItem="GwM-0J-Wkg" firstAttribute="leading" secondItem="WvN-m6-e5A" secondAttribute="trailing" constant="8" id="qxg-vz-FTm"/>
+                    <constraint firstItem="FwZ-j7-QGA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="r90-6I-u0a"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="262.5" y="253.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="like" width="25" height="25"/>
+    </resources>
+</document>
