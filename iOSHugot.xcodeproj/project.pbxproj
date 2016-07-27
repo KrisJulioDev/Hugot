@@ -13,7 +13,7 @@
 		3515CD5C1D2A8F4100519E71 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3515CD5B1D2A8F4100519E71 /* LoginViewController.swift */; };
 		35323C4A1D368CC700326677 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35323C471D368CC700326677 /* FBSDKLoginKit.framework */; };
 		35323C4B1D368CC700326677 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35323C481D368CC700326677 /* FBSDKShareKit.framework */; };
-		3561F6AA1D37D9CE007CA2AC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3561F6A91D37D9CE007CA2AC /* FBSDKCoreKit.framework */; };
+		3536DF991D44FE85001791E8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3536DF981D44FE85001791E8 /* FBSDKCoreKit.framework */; };
 		3590B1E61D2696F600B5B58D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3590B1E51D2696F600B5B58D /* GoogleService-Info.plist */; };
 		3594B3011D26A60700AB16B2 /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3594B3001D26A60700AB16B2 /* Activity.storyboard */; };
 		3594B3031D26AA3900AB16B2 /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3594B3021D26AA3900AB16B2 /* FrontPageViewController.swift */; };
@@ -69,7 +69,7 @@
 		3515CD601D2A907D00519E71 /* iOSHugot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSHugot-Bridging-Header.h"; sourceTree = "<group>"; };
 		35323C471D368CC700326677 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "iOS Frameworks/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		35323C481D368CC700326677 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "iOS Frameworks/FBSDKShareKit.framework"; sourceTree = "<group>"; };
-		3561F6A91D37D9CE007CA2AC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "iOS Frameworks/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		3536DF981D44FE85001791E8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "iOS Frameworks/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		3590B1E51D2696F600B5B58D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3594B3001D26A60700AB16B2 /* Activity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
 		3594B3021D26AA3900AB16B2 /* FrontPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontPageViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C145C0BF52D9E622CC8CFAC6 /* Pods_iOSHugot.framework in Frameworks */,
-				3561F6AA1D37D9CE007CA2AC /* FBSDKCoreKit.framework in Frameworks */,
+				3536DF991D44FE85001791E8 /* FBSDKCoreKit.framework in Frameworks */,
 				35323C4A1D368CC700326677 /* FBSDKLoginKit.framework in Frameworks */,
 				35323C4B1D368CC700326677 /* FBSDKShareKit.framework in Frameworks */,
 			);
@@ -328,7 +328,7 @@
 		6843BEFEAC04553F7A3BB9A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3561F6A91D37D9CE007CA2AC /* FBSDKCoreKit.framework */,
+				3536DF981D44FE85001791E8 /* FBSDKCoreKit.framework */,
 				35323C471D368CC700326677 /* FBSDKLoginKit.framework */,
 				35323C481D368CC700326677 /* FBSDKShareKit.framework */,
 				52477F3E2D81DD939A2199F7 /* Pods_iOSHugot.framework */,
@@ -795,6 +795,10 @@
 					Frameworks,
 					"$(PROJECT_DIR)/iOS",
 					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
 				);
 				GCC_PREFIX_HEADER = iOSHugot/PrefixHeader.pch;
 				INFOPLIST_FILE = iOSHugot/Info.plist;
@@ -805,7 +809,7 @@
 				PROVISIONING_PROFILE = "9880d886-5532-408a-9b5a-46991f7050c5";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSHugot/iOSHugot-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -824,6 +828,10 @@
 					Frameworks,
 					"$(PROJECT_DIR)/iOS",
 					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
 				);
 				GCC_PREFIX_HEADER = iOSHugot/PrefixHeader.pch;
 				INFOPLIST_FILE = iOSHugot/Info.plist;
@@ -833,7 +841,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9880d886-5532-408a-9b5a-46991f7050c5";
 				SWIFT_OBJC_BRIDGING_HEADER = "iOSHugot/iOSHugot-Bridging-Header.h";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

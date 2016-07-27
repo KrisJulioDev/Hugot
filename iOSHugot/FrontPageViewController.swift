@@ -82,7 +82,8 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
     func  addTitleCallback() {
         
         let titleButton = UIButton()
-        titleButton.setTitle("@\(UserHelper.userDisplayName.stringByReplacingOccurrencesOfString(" " , withString: ""))", forState: .Normal)
+//        titleButton.setTitle("@\(UserHelper.userDisplayName.stringByReplacingOccurrencesOfString(" " , withString: ""))", forState: .Normal)
+        titleButton.setTitle("@MisterHugot", forState: .Normal)
         
         titleButton.titleLabel?.font = UIFont(name: "Kohinoor Bangla", size: 20)
         titleButton.addTarget(self, action: #selector(FrontPageViewController.showUserProfile), forControlEvents: .TouchUpInside)
@@ -309,7 +310,7 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
    
         if let h = HugotViewModel().generate(uid, data: data) {
             self.hugotLists.value.append(h)
-            self.hugotLists.value.sortInPlace({ return $0.likes > $1.likes })
+            self.hugotLists.value.sortInPlace({ return $0.totalLikes() > $1.totalLikes() })
         }
         
         SVProgressHUD.dismiss()
@@ -323,7 +324,7 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
             
             if let h = HugotViewModel().generate(uid, data: data), index = self.hugotLists.value.indexOf(existingModel.first!) {
                 self.hugotLists.value[index] = h
-                self.hugotLists.value.sortInPlace({ return $0.likes > $1.likes })
+                self.hugotLists.value.sortInPlace({ return $0.totalLikes() > $1.totalLikes() })
                 
             }
         }
@@ -379,10 +380,17 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
     func swipeTableCell(cell: MGSwipeTableCell!, canSwipe direction: MGSwipeDirection) -> Bool {
         
         let indexOfCell = self.tableView.indexPathForCell(cell)
+        return true
         if let hugotLine : HugotLine = self.hugotLists.value[(indexOfCell?.row)!]  {
-            return hugotLine.authorID != UserHelper.userId
+            
+            if direction == .RightToLeft && hugotLine.liked() {
+                return false
+            } else if direction == .LeftToRight && hugotLine.disliked() {
+                return false
+            }
+            
         }
-        
+
         return true
         
     }
@@ -402,7 +410,7 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
             self.hugotLists.value.sortInPlace({ $0.dateCreated > $1.dateCreated })
             break
         case .Trending:
-            self.hugotLists.value.sortInPlace({ $0.likes > $1.likes })
+            self.hugotLists.value.sortInPlace({ $0.totalLikes() > $1.totalLikes() })
             break
         case .Yours:
             self.hugotLists.value = self.hugotLists.value.filter({ $0.author == UserHelper.userDisplayName })

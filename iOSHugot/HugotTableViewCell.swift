@@ -16,6 +16,10 @@ class HugotTableViewCell: MGSwipeTableCell {
     @IBOutlet weak var hugotLine : UILabel!
     @IBOutlet weak var voteCount : UILabel!
     @IBOutlet weak var viewHolder : UIView!
+    @IBOutlet weak var likeImage : UIImageView!
+    
+    let likeImg = UIImage(named: "like")
+    let dislikeImg = UIImage(named: "dislike")
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,11 +27,12 @@ class HugotTableViewCell: MGSwipeTableCell {
     
     func displayData( data : HugotLine ) { 
         
-        self.authorName.text = "@\(data.author)"
+        self.authorName.text = "Created by @\(data.author)"
         self.hugotLine.text = "\"\(data.line)\""
-        self.voteCount.text = "\(data.likes)"
+        self.voteCount.text = "\(data.totalLikes())"
+        self.likeImage.image = data.liked() ? likeImg : dislikeImg
     
-        changeColorDependsOnLikes(data.likes)
+        changeColorDependsOnLikes(data.totalLikes())
     }
     
     func changeColorDependsOnLikes( likes : Int) {

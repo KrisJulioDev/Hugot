@@ -76,7 +76,8 @@ class ComposerViewController: MainViewController {
         
         hugotViewModel.author      = UserHelper.userDisplayName
         hugotViewModel.authorID    = UserHelper.userId
-        hugotViewModel.likes       = Int(0)
+        hugotViewModel.likes       = [String]()
+        hugotViewModel.dislikes    = [String]()
         hugotViewModel.line        = self.hugotField.text
         hugotViewModel.dateCreated = FIRServerValue.timestamp()
         

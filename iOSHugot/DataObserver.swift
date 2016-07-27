@@ -88,7 +88,7 @@ class DataObserver : DataService  {
                     
                 }
                 
-                convertedData.sortInPlace({ $0.likes > $1.likes })
+                convertedData.sortInPlace({ $0.totalLikes() > $1.totalLikes() })
                 
                 observer.onNext(convertedData)
                 observer.onCompleted()

@@ -15,7 +15,8 @@ class HugotViewModel {
     dynamic var authorID : String?
     dynamic var author : String?
     dynamic var line : String?
-    var likes : Int?
+    var likes : [String]?
+    var dislikes : [String]?
     dynamic var dateCreated : AnyObject?
     
     func prepareData () -> NSDictionary? {
@@ -23,10 +24,11 @@ class HugotViewModel {
         self.authorID    = authorID ?? ""
         self.author      = author ?? ""
         self.line        = line ?? ""
-        self.likes       = likes ?? 0
+        self.likes       = likes ?? [String]()
+        self.dislikes       = dislikes ?? [String]()
         self.dateCreated = dateCreated ?? FIRServerValue.timestamp()
         
-         return NSDictionary(objects: [author!, authorID!, line!, dateCreated!, likes!], forKeys: ["author", "authorID", "line", "dateCreated", "likes"])
+         return NSDictionary(objects: [author!, authorID!, line!, dateCreated!, likes!, dislikes!], forKeys: ["author", "authorID", "line", "dateCreated", "likes", "dislikes"])
     }
     
     func generate ( id : String, data : NSDictionary ) -> HugotLine? {
@@ -35,11 +37,12 @@ class HugotViewModel {
         self.authorID   = data["authorID"] as? String
         self.author      = data["author"] as? String
         self.line        = data["line"] as? String
-        self.likes       = data["likes"] as? Int
+        self.likes       = data["likes"] as? [String] ?? []
+        self.dislikes    = data["dislikes"] as? [String] ?? []
         self.dateCreated = data["dateCreated"] ?? 0
         
-        if let u = uniquieID, ai = authorID,a = author, l = line, li = likes, dc = dateCreated {
-            return HugotLine.init(uniqueID : u, authorID : ai, author : a, line: l, likes: li, dateCreated: dc as! Int)
+        if let u = uniquieID, ai = authorID,a = author, l = line, li = likes, dl = dislikes, dc = dateCreated {
+            return HugotLine.init(uniqueID : u, authorID : ai, author : a, line: l, likes: li, dislikes : dl, dateCreated: dc as! Int)
         } else {
             return nil
         }
@@ -51,8 +54,19 @@ class HugotViewModel {
         
         let ref = DataService.dataServiceInstance.HugotRef
         let key = hugotModel.uniqueID
+        var likes = hugotModel.likes
         
-        ref.child("/\(key)/likes").setValue(hugotModel.likes + 1)
+        let userId = UserHelper.userId ?? ""
+        likes.append(userId)
+        
+        if let dl = dislikes, index = dl.indexOf(userId) {
+            dislikes?.removeAtIndex(index)
+        }
+        
+        let updates = ["/\(key)/likes" : likes,
+                       "/\(key)/dislikes" : dislikes ?? []]
+        
+        ref.updateChildValues(updates)
         
     }
     
@@ -60,8 +74,19 @@ class HugotViewModel {
         
         let ref = DataService.dataServiceInstance.HugotRef
         let key = hugotModel.uniqueID
+        var dislikes = hugotModel.dislikes
+        let userId = UserHelper.userId ?? ""
+        dislikes.append(userId)
         
-        ref.child("/\(key)/likes").setValue(hugotModel.likes - 1)
+        
+        if let l = likes, index = l.indexOf(userId) {
+            likes?.removeAtIndex(index)
+        }
+        
+        let updates = ["/\(key)/likes" : likes ?? [],
+                       "/\(key)/dislikes" : dislikes]
+        
+        ref.updateChildValues(updates)
         
     }
 }
