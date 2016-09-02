@@ -53,9 +53,10 @@ class DataObserver : DataService  {
         
     }
     
+    
     //MARK: User Observers
     func createObserverForUserData() {
-        UserRef.observeEventType(.ChildChanged, withBlock: {
+        UserRef.child("\(UserHelper.userId)").observeEventType(.ChildChanged, withBlock: {
             snapshot in
             
             if snapshot.value is NSDictionary {
@@ -66,7 +67,6 @@ class DataObserver : DataService  {
             }
         })
     }
-    
     
     func fetchInitialData() -> Observable<[HugotLine]> {
         
@@ -98,7 +98,7 @@ class DataObserver : DataService  {
             return NopDisposable.instance
         }
         
-    } 
+    }
 }
 
 

@@ -36,6 +36,7 @@ UIColor(colorLiteralRed: 167/255.0, green: 82/255.0, blue: 115/255.0, alpha: 1)]
 let ProgressTag = 111
 
 //Mark : String
-let NewHugotNotification = "hugot_notif" 
+let NewHugotNotification = "hugot_notif"
 let HugotCellIdentifier = "hugotCell"
 let UserIdentifier = "user_identifier"
+let BannedName = "+"

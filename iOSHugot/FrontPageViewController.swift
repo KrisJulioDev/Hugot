@@ -13,7 +13,7 @@ import MGSwipeTableCell
 import DGElasticPullToRefresh
 import SVProgressHUD
 
-class FrontPageViewController: MainViewController, UITableViewDelegate, DataObserverProtocol, MGSwipeTableCellDelegate, FBSDKSharingDelegate, UIScrollViewDelegate  {
+class FrontPageViewController: MainViewController, UITableViewDelegate, DataObserverProtocol, MGSwipeTableCellDelegate, FBSDKSharingDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate  {
     
     //Reactive TableView
     @IBOutlet weak var tableView : UITableView!
@@ -29,6 +29,8 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
     var newBarItem : UIBarButtonItem?
     
     var isFetching : Bool = false
+    
+    internal var preview : UploadPreview?
     
     enum FilterState : Int {
         case Trending = 0
@@ -64,8 +66,6 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         self.showProgress("Hinuhugot...")
         self.setupRxObservers()
         self.fetchInitialData()
@@ -82,15 +82,14 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
     func  addTitleCallback() {
         
         let titleButton = UIButton()
-//        titleButton.setTitle("@\(UserHelper.userDisplayName.stringByReplacingOccurrencesOfString(" " , withString: ""))", forState: .Normal)
-        titleButton.setTitle("@MisterHugot", forState: .Normal)
         
+        let titleName = SaveData.sharedInstance.userSavedName ?? ""
+        titleButton.setTitle("@\(titleName.stringByReplacingOccurrencesOfString(" " , withString: ""))", forState: .Normal)
         titleButton.titleLabel?.font = UIFont(name: "Kohinoor Bangla", size: 20)
         titleButton.addTarget(self, action: #selector(FrontPageViewController.showUserProfile), forControlEvents: .TouchUpInside)
         
         self.navigationItem.titleView = titleButton
     }
-    
     
     func fetchInitialData() {
         dataObserver = DataObserver(delegate: self) 
@@ -102,6 +101,8 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
     
     //MARK: RX Setup
     func setupRxObservers() {
+        
+        SaveData.sharedInstance.fronPage = self
         
         // Setup tableview for data display
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -133,15 +134,18 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             
             if cell is HugotTableViewCell {
+                
                 (cell as! HugotTableViewCell).displayData(element)
+                (cell as! HugotTableViewCell).addReportButtonCallbackToModel(element, del: self)
+                
                 cell.editing = false
+                
                 
             }
             
             if cell is MGSwipeTableCell {
                 let cellx = cell as! MGSwipeTableCell
                 cellx.delegate = self
-                
                 
             }
             
@@ -205,6 +209,11 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
         self.present(nav)
     }
     
+    //MARK: Method call from other class
+    func removeModelToOriginalList( model : HugotLine) {
+        SaveData.sharedInstance.originalLists = SaveData.sharedInstance.originalLists.filter({ $0 != model })
+    }
+    
     //MARK: Facebook share action
     func shareOnFacebook ( model : HugotLine ) {
         
@@ -233,13 +242,31 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
             })
             
             let uploadPreview = preView as? UploadPreview
-            uploadPreview?.hugotLine.text = model.line
+            uploadPreview?.applyStroke(model.line)
+            
+            uploadPreview?.createdLabel.text? = "Created by #HugotApp"
+            UserHelper.fetchUserName(model.authorID).subscribeNext({
+                name in
+                
+                uploadPreview?.createdLabel.text? = "Created by @\(name)"
+                
+                
+            }).addDisposableTo(disposeBag)
+            
+            uploadPreview?.changeImage.rx_tap.subscribeNext({
+                
+                self.preview = uploadPreview
+                self.showActionSheet()
+                
+            }).addDisposableTo(self.disposeBag)
             
             //Upload button
             uploadPreview?.uploadButton.rx_tap.subscribeNext({[weak self]
                 _ in
                 uploadPreview?.actionView.hidden = true
+                uploadPreview?.closeButton.hidden = true
                 uploadPreview?.siteLabel.hidden = false
+                uploadPreview?.createdLabel.hidden = false
                 UIGraphicsBeginImageContextWithOptions(preView.bounds.size, false, 0.0)
                 preView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
                 let screenShot = UIGraphicsGetImageFromCurrentImageContext();
@@ -249,7 +276,9 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
                 self?.shareImageOnFacebook(screenShot)
                 
                 uploadPreview?.actionView.hidden = false
+                uploadPreview?.closeButton.hidden = false
                 uploadPreview?.siteLabel.hidden = true
+                uploadPreview?.createdLabel.hidden = true
                 
             }).addDisposableTo(disposeBag)
             
@@ -309,8 +338,18 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
     func dataAdded(uid: String, data: NSDictionary) {
    
         if let h = HugotViewModel().generate(uid, data: data) {
-            self.hugotLists.value.append(h)
+            
+            if !h.author.containsString(BannedName) {
+                self.hugotLists.value.append(h)
+            }
+            
             self.hugotLists.value.sortInPlace({ return $0.totalLikes() > $1.totalLikes() })
+        }
+        
+        for h in hugotLists.value {
+            if !SaveData.sharedInstance.originalLists.contains(h) {
+                SaveData.sharedInstance.originalLists.append(h)
+            }
         }
         
         SVProgressHUD.dismiss()
@@ -323,12 +362,17 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
         if existingModel.count > 0 {
             
             if let h = HugotViewModel().generate(uid, data: data), index = self.hugotLists.value.indexOf(existingModel.first!) {
-                self.hugotLists.value[index] = h
+                
+                if h.author.containsString(BannedName) {
+                    self.hugotLists.value.removeAtIndex(index)
+                } else {
+                    self.hugotLists.value[index] = h
+                }
+                
                 self.hugotLists.value.sortInPlace({ return $0.totalLikes() > $1.totalLikes() })
                 
             }
         }
-        
     }
     
     //MARK: Swipe delegates
@@ -380,8 +424,10 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
     func swipeTableCell(cell: MGSwipeTableCell!, canSwipe direction: MGSwipeDirection) -> Bool {
         
         let indexOfCell = self.tableView.indexPathForCell(cell)
-        return true
+
         if let hugotLine : HugotLine = self.hugotLists.value[(indexOfCell?.row)!]  {
+            
+            if hugotLine.authorID == UserHelper.userId { return false }
             
             if direction == .RightToLeft && hugotLine.liked() {
                 return false
@@ -405,6 +451,8 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
         self.showProgress(self.filterState.title)
         delay(1, closure: { self.hideProgress() })
         
+        self.hugotLists.value = SaveData.sharedInstance.originalLists.removeDuplicates()
+        
         switch self.filterState {
         case .New:
             self.hugotLists.value.sortInPlace({ $0.dateCreated > $1.dateCreated })
@@ -413,13 +461,80 @@ class FrontPageViewController: MainViewController, UITableViewDelegate, DataObse
             self.hugotLists.value.sortInPlace({ $0.totalLikes() > $1.totalLikes() })
             break
         case .Yours:
-            self.hugotLists.value = self.hugotLists.value.filter({ $0.author == UserHelper.userDisplayName })
+            self.hugotLists.value = self.hugotLists.value.filter({ $0.author == SaveData.sharedInstance.userSavedName })
             break
         }
+    }
+    
+    
+    //MARK: Change Photo
+    /* actionsheet selection for uploading photo */
+    func showActionSheet() {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default, handler: { (alert:UIAlertAction!) -> Void in
+            self.camera()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default, handler: { (alert:UIAlertAction!) -> Void in
+            self.photoLibrary()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        
+        self.presentViewController(actionSheet, animated: true, completion: nil)
+        
+    }
+    
+    /* camera for photo capture */
+    func camera()  {
+        let myPickerController = UIImagePickerController()
+        myPickerController.delegate = self
+        myPickerController.sourceType = UIImagePickerControllerSourceType.Camera
+        
+        self.presentViewController(myPickerController, animated: true, completion: nil)
+        
+    }
+    
+    /* gather from photo library */
+    func photoLibrary() {
+        
+        let myPickerController = UIImagePickerController()
+        myPickerController.delegate = self
+        myPickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        
+        self.presentViewController(myPickerController, animated: true, completion: nil)
+        
+    }
+    
+    //MARK: UIImagePickerDelegate methods
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        self.preview?.hugotImage.image = image
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
     deinit {
         tableView.dg_removePullToRefresh()
     }
     
+}
+extension Array where Element:Equatable {
+    func removeDuplicates() -> [Element] {
+        var result = [Element]()
+        
+        for value in self {
+            if result.contains(value) == false {
+                result.append(value)
+            }
+        }
+        
+        return result
+    }
 }

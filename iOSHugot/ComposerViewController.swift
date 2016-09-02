@@ -73,8 +73,9 @@ class ComposerViewController: MainViewController {
     
     func post() {
         
+        self.disableInteraction()
         
-        hugotViewModel.author      = UserHelper.userDisplayName
+        hugotViewModel.author      = SaveData.sharedInstance.userSavedName
         hugotViewModel.authorID    = UserHelper.userId
         hugotViewModel.likes       = [String]()
         hugotViewModel.dislikes    = [String]()
@@ -111,14 +112,18 @@ class ComposerViewController: MainViewController {
                     self.trackPost()
                     
                     UIViewController.hideHud()
-                    self.cancel()
-                    
                 }
                 
+                self.enableInteraction()
+                self.cancel()
             })
 
         
         }
+        
+        delay(15, closure: {
+            self.enableInteraction()
+        })
     }
     
     func cancel() {

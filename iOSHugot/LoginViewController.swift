@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 import FirebaseAuth
 import SVProgressHUD
 
-class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
-
-    @IBOutlet weak var loginButton : FBSDKLoginButton!
+class LoginViewController: UIViewController {
+ 
     @IBOutlet weak var fakeLaunchScreen : UIView!
+    @IBOutlet weak var email : UITextField!
+    @IBOutlet weak var pass : UITextField!
+
+    
+    private let segueToTC = "terms_and_cond"
     
     override func viewDidLoad() { 
         super.viewDidLoad()
@@ -22,45 +28,49 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             self.fakeLaunchScreen.removeFromSuperview()
         })
         
-        loginButton.readPermissions = ["public_profile", "email", "user_friends"];
-        loginButton.publishPermissions = ["publish_actions"]
-    } 
-    
-    func loginButtonWillLogin(loginButton: FBSDKLoginButton!) -> Bool {
-        return true
     }
     
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
-        if let error = error {
-            debugPrint("Facebook login failed \(error.description)")
-        } else if result.isCancelled {
-            debugPrint("Facebook login cancelled")
-        } else {
-            debugPrint("Facebook login successfully")
-            self.loginButton.hidden = true
-            SVProgressHUD.show()
+    }
+    
+    @IBAction func login() {
+        
+        SVProgressHUD.show()
+        
+        FIRAuth.auth()?.signInWithEmail(self.email.text ?? "", password: self.pass.text ?? "", completion: {
+            result, error in
             
-            let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
-            let credential = FIRFacebookAuthProvider.credentialWithAccessToken(accessToken)
-            
-            FIRAuth.auth()?.signInWithCredential(credential) { [weak self] ( user, error) in
+            SVProgressHUD.dismiss()
+            if let e = error {
                 
-                if let error = error {
-                    debugPrint("Firebase login failed \(error.description)")
-                } else {
+                let alert = UIAlertController(title: "Login failed", message: e.localizedDescription, preferredStyle: .Alert)
+                let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: {
+                    _ in
                     
-                    
-                    self?.showActivityPage()
-                    UserViewModel().saveNewUser()
-                }
+                })
                 
+                alert.addAction(ok)
+                
+                self.presentViewController(alert, animated: true, completion: nil)
+                
+            } else {
+                
+                // create user if still not saved to servera
+                UserViewModel().saveNewUser()
+                ViewHelper.showActivityStoryBoardFromVC(self)
             }
-        }
+            
+        })
+    
+        delay(10, closure: {
+            SVProgressHUD.dismiss()
+        })
+        
         
     }
-    
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {}
+
     
     //MARK: Transition to Actiivty
     func showActivityPage() {
@@ -68,5 +78,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         ViewHelper.showActivityStoryBoardFromVC(self)
         
     }
+    
     
 }

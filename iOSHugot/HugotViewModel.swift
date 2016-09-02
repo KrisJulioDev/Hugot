@@ -49,6 +49,16 @@ class HugotViewModel {
         
     }
     
+    //MARK: REMOVAL
+    //remove hugot from the list and add to iinvestigation
+    func removeHugotAndInvestigate( model : HugotLine ) {
+        let ref = DataService.dataServiceInstance.HugotRef
+        let name = "\(model.author)\(BannedName)"
+        let key = model.uniqueID
+        
+        let updates =  ["/\(key)/author" : name]
+        ref.updateChildValues(updates)
+    }
     
     func incrementLike( hugotModel : HugotLine ) {
         
@@ -88,5 +98,29 @@ class HugotViewModel {
         
         ref.updateChildValues(updates)
         
+    }
+    
+    
+    func changeHugotAuthor( newName : String ) {
+        DataObserver.dataServiceInstance.HugotRef.queryOrderedByChild("authorID").queryEqualToValue(UserHelper.userId).observeEventType(.ChildAdded, withBlock: {
+            (hugot : FIRDataSnapshot) in
+            
+            if hugot.value is NSNull { return }
+            
+            guard hugot.value is NSDictionary else { return }
+            
+            self.updateName(hugot.key, name: newName)
+            
+        })
+    }
+    
+    internal func updateName(key : String, name : String = "") {
+        
+        let ref = DataService.dataServiceInstance.HugotRef
+        
+        let updates = ["/\(key)/author" : name]
+        
+        ref.updateChildValues(updates)
+
     }
 }

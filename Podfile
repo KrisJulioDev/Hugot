@@ -14,4 +14,5 @@ pod 'MGSwipeTableCell'
 pod 'SDWebImage', '~>3.8'
 pod "DGElasticPullToRefresh"
 pod 'Batch', '~>1.5.4'
+pod 'IQKeyboardManagerSwift'
 end 

@@ -28,7 +28,7 @@ class UserViewModel {
         self.dateCreated = dateCreated ?? 0
         
         return NSDictionary(objects: [displayName, displayPhotoURL, userHearts, userPosts, dateCreated! ],
-                            forKeys: ["name", "photoURL", "hearts", "posts","dateCreated"])
+                            forKeys: ["name", "photoURL", "hearts", "posts", "dateCreated"])
     }
     
     //MARK: Save new user
@@ -36,10 +36,8 @@ class UserViewModel {
         
         checkIfUserExists(UserHelper.userId!, saveBlock: { _ in
             
-            
             let newUser = UserViewModel()
-            newUser.displayName = UserHelper.userDisplayName
-            newUser.displayPhotoURL = UserHelper.userDisplayPhotoURL!.absoluteString
+            newUser.displayName = UserHelper.userDisplayName 
             
             newUser.userHearts = InitialHearts
             newUser.userPosts  = 0
@@ -91,10 +89,12 @@ class UserViewModel {
             if snapshot.value is NSNull {
                 saveBlock()
             } else {
-                let data = snapshot.value as! [String : NSDictionary]
+                if let data = snapshot.value as? [String : NSDictionary] {
                 for d in data {
                     let userData = self.generate(d.0, data: d.1)
                     SaveData.sharedInstance.userProfile = userData
+                    SaveData.sharedInstance.userSavedName = userData.displayName
+                }
                 }
             }
             
@@ -105,7 +105,7 @@ class UserViewModel {
     func queryUserWithID ( id : String, completionBlock : (AnyObject? ) -> () ) {
         DataService.dataServiceInstance.UserRef.queryOrderedByKey().queryEqualToValue(id).observeSingleEventOfType(.Value, withBlock: {
             snapshot in
-            
+    
                 completionBlock(snapshot.value)
             
         })
@@ -130,10 +130,11 @@ class UserViewModel {
             
             if value is NSNull { return }
             
-            let data = value as! [String : NSDictionary]
-            for d in data {
-                let userModel = self.generate(d.0, data: d.1)
-                ref.child("/\(key)/hearts").setValue(userModel.userHearts + (isIncrement ? valueChange : -valueChange))
+            if let data = value as? [String : NSDictionary] {
+                for d in data {
+                    let userModel = self.generate(d.0, data: d.1)
+                    ref.child("/\(key)/hearts").setValue(userModel.userHearts + (isIncrement ? valueChange : -valueChange))
+                }
             }
         })
     }

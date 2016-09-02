@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iOSHugot/UserViewModel.swift"
-            timestampString = "490544974.12407"
+            filePath = "iOSHugot/FrontPageViewController.swift"
+            timestampString = "492442392.499167"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "checkIfUserExists(_:saveBlock:)"
+            startingLineNumber = "406"
+            endingLineNumber = "406"
+            landmarkName = "swipeTableCellWillEndSwiping(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -8,13 +8,33 @@
 
 import UIKit
 import Firebase
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
  
+    var deviceUUID : String? {
+        get {
+            return NSUserDefaults.standardUserDefaults().stringForKey("kLastConnectedBTv4DeviceUUID") ?? nil
+        } set {
+            NSUserDefaults.standardUserDefaults().setValue(newValue, forKey: "kLastConnectedBTv4DeviceUUID")
+        }
+    }
+    
+    
+    //Pagamit sa loob ng method :D
+    
+    if let devUUID = deviceUUID {
+        debugPrint(deviceUUID)
+    }
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        IQKeyboardManager.sharedManager().enable = true
+
         
         
         FIRApp.configure()
@@ -23,9 +43,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //transparent nav
         setupNavBar()
         
+        
         if UserHelper.isAuthenticated {
             
-            // create user if still not saved to server
+            // create user if still not saved to servera
             UserViewModel().saveNewUser()
             
             if let w = self.window, rvc = w.rootViewController {
@@ -38,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 
             }
-        }
+        } 
          
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }

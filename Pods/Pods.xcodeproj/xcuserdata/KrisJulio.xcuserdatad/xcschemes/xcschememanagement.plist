@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MGSwipeTableCell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +47,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0EBA3820648DDF2FD1A35F1B295B6544</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>115824B7CB2E76E5ACB836A251E79404</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>29D201AC1B177E7679A8912AAD58D93D</key>
+		<key>1520003FEBEC114D6C84F832AFEDB994</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>34E757F125F6930503E8B23B8A277F13</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +67,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>856A5FFCFD6D8B704096F9A8E9A82470</key>
+		<key>568A24FB84AEDAC505C94494076BE818</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3CBC8B6BB1FB8B95A335DD63A66682D</key>
+		<key>7E3544869FE5641EDAE0D81A49BC812E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E3FC40F19ADC5E4C659D69B3BEC03DD7</key>
+		<key>C01F63D223679DA2500FF6241D7754E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C1E212C217AE88919DA9F4BF0F282C8D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

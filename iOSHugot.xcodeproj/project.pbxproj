@@ -11,14 +11,13 @@
 		3501ED091D3531CC002621FC /* UploadPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3501ED081D3531CC002621FC /* UploadPreview.xib */; };
 		3501ED0B1D353DD5002621FC /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3501ED0A1D353DD5002621FC /* UIImageExtension.swift */; };
 		3515CD5C1D2A8F4100519E71 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3515CD5B1D2A8F4100519E71 /* LoginViewController.swift */; };
-		35323C4A1D368CC700326677 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35323C471D368CC700326677 /* FBSDKLoginKit.framework */; };
-		35323C4B1D368CC700326677 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35323C481D368CC700326677 /* FBSDKShareKit.framework */; };
-		3536DF991D44FE85001791E8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3536DF981D44FE85001791E8 /* FBSDKCoreKit.framework */; };
+		351CA4E51D48E8F700F4E700 /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CA4E41D48E8F700F4E700 /* TermsAndConditionsViewController.swift */; };
 		3590B1E61D2696F600B5B58D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3590B1E51D2696F600B5B58D /* GoogleService-Info.plist */; };
 		3594B3011D26A60700AB16B2 /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3594B3001D26A60700AB16B2 /* Activity.storyboard */; };
 		3594B3031D26AA3900AB16B2 /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3594B3021D26AA3900AB16B2 /* FrontPageViewController.swift */; };
 		3594B3061D26AE2F00AB16B2 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3594B3051D26AE2F00AB16B2 /* DataService.swift */; };
 		3594B30A1D26AFD600AB16B2 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3594B3091D26AFD600AB16B2 /* AppConstants.swift */; };
+		3598CB091D58A82C00760858 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3598CB081D58A82C00760858 /* FBSDKShareKit.framework */; };
 		35AE7B301D2AA0CB00CB3E16 /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE7B2F1D2AA0CB00CB3E16 /* UserHelper.swift */; };
 		35AE7B321D2AA41300CB3E16 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE7B311D2AA41300CB3E16 /* ViewHelper.swift */; };
 		35AE7B381D2AACFB00CB3E16 /* HugotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AE7B361D2AACFB00CB3E16 /* HugotTableViewCell.swift */; };
@@ -36,11 +35,13 @@
 		35D1BD1F1D2691F10066F611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D1BD1D1D2691F10066F611 /* LaunchScreen.storyboard */; };
 		35D1BD2A1D2691F10066F611 /* iOSHugotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1BD291D2691F10066F611 /* iOSHugotTests.swift */; };
 		35D1BD351D2691F10066F611 /* iOSHugotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D1BD341D2691F10066F611 /* iOSHugotUITests.swift */; };
+		35F1392C1D5A0C7C002E84B1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F1392B1D5A0C7C002E84B1 /* FBSDKCoreKit.framework */; };
 		35F4502B1D2CC0E900E90783 /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4502A1D2CC0E900E90783 /* ButtonExtensions.swift */; };
 		35F4502E1D2CE65000E90783 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4502C1D2CE65000E90783 /* UserProfileViewController.swift */; };
 		35F4502F1D2CE65000E90783 /* UserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35F4502D1D2CE65000E90783 /* UserProfileViewController.xib */; };
 		35F450321D2CEBD400E90783 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F450311D2CEBD400E90783 /* UserModel.swift */; };
 		35F450341D2CECA800E90783 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F450331D2CECA800E90783 /* UserViewModel.swift */; };
+		35FF3B5C1D589FB900DE8B08 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF3B5B1D589FB900DE8B08 /* RegisterViewController.swift */; };
 		C145C0BF52D9E622CC8CFAC6 /* Pods_iOSHugot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52477F3E2D81DD939A2199F7 /* Pods_iOSHugot.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,15 +68,14 @@
 		3501ED0A1D353DD5002621FC /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		3515CD5B1D2A8F4100519E71 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3515CD601D2A907D00519E71 /* iOSHugot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSHugot-Bridging-Header.h"; sourceTree = "<group>"; };
-		35323C471D368CC700326677 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "iOS Frameworks/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
-		35323C481D368CC700326677 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "iOS Frameworks/FBSDKShareKit.framework"; sourceTree = "<group>"; };
-		3536DF981D44FE85001791E8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "iOS Frameworks/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		351CA4E41D48E8F700F4E700 /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		3590B1E51D2696F600B5B58D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3594B3001D26A60700AB16B2 /* Activity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
 		3594B3021D26AA3900AB16B2 /* FrontPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontPageViewController.swift; sourceTree = "<group>"; };
 		3594B3051D26AE2F00AB16B2 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		3594B3091D26AFD600AB16B2 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		3594B30B1D26B00100AB16B2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3598CB081D58A82C00760858 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "iOS Frameworks/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		35AE7B2F1D2AA0CB00CB3E16 /* UserHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHelper.swift; sourceTree = "<group>"; };
 		35AE7B311D2AA41300CB3E16 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
 		35AE7B361D2AACFB00CB3E16 /* HugotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HugotTableViewCell.swift; sourceTree = "<group>"; };
@@ -99,12 +99,14 @@
 		35D1BD301D2691F10066F611 /* iOSHugotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSHugotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D1BD341D2691F10066F611 /* iOSHugotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSHugotUITests.swift; sourceTree = "<group>"; };
 		35D1BD361D2691F10066F611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35F1392B1D5A0C7C002E84B1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "iOS Frameworks/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		35F4502A1D2CC0E900E90783 /* ButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtensions.swift; sourceTree = "<group>"; };
 		35F4502C1D2CE65000E90783 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		35F4502D1D2CE65000E90783 /* UserProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileViewController.xib; sourceTree = "<group>"; };
 		35F450311D2CEBD400E90783 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		35F450331D2CECA800E90783 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		35F450351D2E7E7A00E90783 /* beyond_the_mountains.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = beyond_the_mountains.ttf; sourceTree = "<group>"; };
+		35FF3B5B1D589FB900DE8B08 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		52477F3E2D81DD939A2199F7 /* Pods_iOSHugot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSHugot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C14BA55AB2FEB3FC78D8A84 /* Pods_iOSHugotUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSHugotUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B087BDE4BD11BAD21AAB05 /* Pods-iOSHugot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSHugot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSHugot/Pods-iOSHugot.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,10 +119,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3598CB091D58A82C00760858 /* FBSDKShareKit.framework in Frameworks */,
+				35F1392C1D5A0C7C002E84B1 /* FBSDKCoreKit.framework in Frameworks */,
 				C145C0BF52D9E622CC8CFAC6 /* Pods_iOSHugot.framework in Frameworks */,
-				3536DF991D44FE85001791E8 /* FBSDKCoreKit.framework in Frameworks */,
-				35323C4A1D368CC700326677 /* FBSDKLoginKit.framework in Frameworks */,
-				35323C4B1D368CC700326677 /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +185,8 @@
 				35F4502D1D2CE65000E90783 /* UserProfileViewController.xib */,
 				3501ED061D3531C0002621FC /* UploadPreview.swift */,
 				3501ED081D3531CC002621FC /* UploadPreview.xib */,
+				351CA4E41D48E8F700F4E700 /* TermsAndConditionsViewController.swift */,
+				35FF3B5B1D589FB900DE8B08 /* RegisterViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -328,9 +331,8 @@
 		6843BEFEAC04553F7A3BB9A3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3536DF981D44FE85001791E8 /* FBSDKCoreKit.framework */,
-				35323C471D368CC700326677 /* FBSDKLoginKit.framework */,
-				35323C481D368CC700326677 /* FBSDKShareKit.framework */,
+				35F1392B1D5A0C7C002E84B1 /* FBSDKCoreKit.framework */,
+				3598CB081D58A82C00760858 /* FBSDKShareKit.framework */,
 				52477F3E2D81DD939A2199F7 /* Pods_iOSHugot.framework */,
 				A70F788C048EEE53FDB591ED /* Pods_iOSHugotTests.framework */,
 				8C14BA55AB2FEB3FC78D8A84 /* Pods_iOSHugotUITests.framework */,
@@ -634,6 +636,8 @@
 				3515CD5C1D2A8F4100519E71 /* LoginViewController.swift in Sources */,
 				35CA87051D2BE2200030C153 /* ComposerViewController.swift in Sources */,
 				35CA87111D2C707F0030C153 /* HugotViewModel.swift in Sources */,
+				35FF3B5C1D589FB900DE8B08 /* RegisterViewController.swift in Sources */,
+				351CA4E51D48E8F700F4E700 /* TermsAndConditionsViewController.swift in Sources */,
 				3501ED071D3531C0002621FC /* UploadPreview.swift in Sources */,
 				35F450341D2CECA800E90783 /* UserViewModel.swift in Sources */,
 				35AE7B381D2AACFB00CB3E16 /* HugotTableViewCell.swift in Sources */,
@@ -799,6 +803,26 @@
 					Frameworks,
 					"$(PROJECT_DIR)/iOS",
 					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
 				);
 				GCC_PREFIX_HEADER = iOSHugot/PrefixHeader.pch;
 				INFOPLIST_FILE = iOSHugot/Info.plist;
@@ -824,6 +848,26 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
+					"$(PROJECT_DIR)/iOS",
+					Frameworks,
 					"$(PROJECT_DIR)/iOS",
 					Frameworks,
 					"$(PROJECT_DIR)/iOS",

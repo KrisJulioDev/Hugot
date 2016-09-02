@@ -53,6 +53,18 @@ class MainViewController: UIViewController {
         return nav
     }
     
+    func disableInteraction() {
+        UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+    }
+    
+    func enableInteraction() {
+        
+        if UIApplication.sharedApplication().isIgnoringInteractionEvents() {
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+        }
+        
+    }
+    
     //Mark: Progress HUd
     func showProgress(label : String = "") {
         UIViewController.showHud(label)

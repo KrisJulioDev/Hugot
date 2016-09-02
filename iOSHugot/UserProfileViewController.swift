@@ -10,8 +10,9 @@ import UIKit
 import SDWebImage
 import FirebaseAuth
 import Firebase
+import SVProgressHUD
 
-class UserProfileViewController: MainViewController, FBSDKLoginButtonDelegate {
+class UserProfileViewController: MainViewController {
 
     @IBOutlet weak var usernameButton : UIButton!
     @IBOutlet weak var heartsLabel : UILabel!
@@ -26,8 +27,6 @@ class UserProfileViewController: MainViewController, FBSDKLoginButtonDelegate {
         userDisplayPhoto.layer.borderColor = UIColor.whiteColor().CGColor
         userDisplayPhoto.layer.borderWidth = 2
         userDisplayPhoto.clipsToBounds = true
-        
-        
         
         populateData()
     }
@@ -56,6 +55,11 @@ class UserProfileViewController: MainViewController, FBSDKLoginButtonDelegate {
             self.heartsLabel.text = "\(hearts)"
             self.userPosted.text = "\(posts)"
             
+            self.usernameButton.rx_tap.subscribeNext({ [weak self] _ in
+                
+                self?.showChangeUserNamePopUp()
+                
+            }).addDisposableTo(disposeBag)
             
             self.userDisplayPhoto.sd_setImageWithURL(NSURL(string: imageURL), placeholderImage: nil, options: .ProgressiveDownload, progress: { rs, es in
                 
@@ -71,16 +75,38 @@ class UserProfileViewController: MainViewController, FBSDKLoginButtonDelegate {
         }
     }
     
-    func loginButtonWillLogin(loginButton: FBSDKLoginButton!) -> Bool {
-        return true
-    }
-    
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        //Nothing to login here
-    }
-    
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+    func showChangeUserNamePopUp() {
         
+        var inputTextField: UITextField?
+        let passwordPrompt = UIAlertController(title: "Change Username", message: "You have selected to change your username.", preferredStyle: UIAlertControllerStyle.Alert)
+        passwordPrompt.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Destructive, handler: nil))
+        passwordPrompt.addAction(UIAlertAction(title: "Change", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+            
+            SVProgressHUD.showWithStatus("Updating...")
+            
+            let newName = inputTextField?.text ?? ""
+            UserHelper.changeUserName(newName)
+            SaveData.sharedInstance.userSavedName = newName
+            HugotViewModel().changeHugotAuthor(newName)
+            self.usernameButton.setTitle(newName, forState: .Normal)
+            
+            
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+            delay(3, closure: {
+                UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                SVProgressHUD.dismiss()
+            })
+            
+        }))
+        passwordPrompt.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+            textField.placeholder = "New Username"
+            inputTextField = textField
+        })
+        
+        presentViewController(passwordPrompt, animated: true, completion: nil)
+    }
+    
+    @IBAction func logout() {
         do {
             try FIRAuth.auth()?.signOut()
             self.trackLogout()
@@ -91,8 +117,9 @@ class UserProfileViewController: MainViewController, FBSDKLoginButtonDelegate {
         catch {
             
         }
-        
+
     }
+    
     func dismissVC() {
        self.dismissViewControllerAnimated(true, completion: nil)
     }
